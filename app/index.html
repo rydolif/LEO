@@ -24,7 +24,8 @@
 			<div class="header__container">
 		
 				<div class="header__logo">
-					<a href="index.html"><img src="img/logo.svg" alt="logo" width="215" height="50"></a>
+					<a href="index.html"><img src="img/logo.svg" alt="logo" width="70" height="75"></a>
+					<a href="index.html"><span>Мебель под заказ</span><span>в стиле Лофт</span></a>
 				</div>
 
 				<button class="hamburger hamburger--3dx" type="button">
@@ -36,19 +37,21 @@
 				<nav class="nav">
 					<ul>
 						<li><a href="#index">Главная</a></li>
-						<li><a href="#tasks">Описание</a></li>
-						<li><a href="#why">Возможности</a></li>
+						<li><a href="#tasks">Каталог</a></li>
+						<li><a href="#why">О нас</a></li>
 						<li><a href="#contacts">Контакты</a></li>
 					</ul>
 
-					<a href="tel:+7(812)309-38-35" class="nav__tel"><span>+7 (812)</span> 309-38-35</a>
-					<a href="#" class="nav__order order_open">Заказать звонок</a>
+					<a href="tel:+7495777-77-00" class="nav__tel">
+						<img src="img/icon/phone.svg" alt="tel" width="14" height="14">
+						<span>+7 495 777-77-00</span>
+					</a>
 				</nav>
 
-				<div class="header__contact">
-					<a href="tel:+7(812)309-38-35" class="tel"><span>+7 (812)</span> 309-38-35</a>
-					<a href="#" class="order order_open">Заказать звонок</a>
-				</div>
+				<a href="tel:+7495777-77-00" class="tel">
+					<img src="img/icon/phone.svg" alt="tel" width="14" height="14">
+					<span>+7 495 777-77-00</span>
+				</a>
 
 			</div>
 		</div>
@@ -56,6 +59,23 @@
 
 	<main class="main">
 
+		<section class="section-header">
+			<div class="container">
+
+				<div class="section-header__content">
+					
+					<h1>Luxury Мебель <br><span>в стиле Loft</span></h1>
+					<p>Невероятная коллекция мебели в стиле лофт, <br>на любой вкус и интерьер</p>
+
+					<a href="#" class="btn">Скачать презентацию</a>
+
+				</div>
+			</div>
+		</section>
+
+		<section class="superiority">
+			
+		</section>
 
 	</main>
 
@@ -84,10 +104,6 @@
 				</div>
 
 			</div>
-		</div>
-
-		<div class="footer__copy">
-			<p>© 2018   DataCube | Все права защищены. | Сделано в <a href="bestslide.ru">bestslide.ru</a></p>
 		</div>
 
 	</footer>
@@ -190,127 +206,6 @@
 			<h2>Спасибо!<br><span>Результат придёт в течении 5 минут</span></h2>
 	</div>
 
-
-     <script>
-      function initMap() {
-        var uluru = {lat: 59.8887997, lng: 30.2736553};
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 16,
-          center: uluru,
-          styles: [
-    {
-        "featureType": "administrative",
-        "elementType": "labels.text.fill",
-        "stylers": [
-            {
-                "color": "#444444"
-            }
-        ]
-    },
-    {
-        "featureType": "administrative.locality",
-        "elementType": "all",
-        "stylers": [
-            {
-                "hue": "#ff0000"
-            }
-        ]
-    },
-    {
-        "featureType": "administrative.neighborhood",
-        "elementType": "all",
-        "stylers": [
-            {
-                "hue": "#ff0000"
-            }
-        ]
-    },
-    {
-        "featureType": "landscape",
-        "elementType": "all",
-        "stylers": [
-            {
-                "color": "#f2f2f2"
-            }
-        ]
-    },
-    {
-        "featureType": "poi",
-        "elementType": "all",
-        "stylers": [
-            {
-                "visibility": "off"
-            }
-        ]
-    },
-    {
-        "featureType": "road",
-        "elementType": "all",
-        "stylers": [
-            {
-                "saturation": -100
-            },
-            {
-                "lightness": 45
-            }
-        ]
-    },
-    {
-        "featureType": "road.highway",
-        "elementType": "all",
-        "stylers": [
-            {
-                "visibility": "simplified"
-            }
-        ]
-    },
-    {
-        "featureType": "road.arterial",
-        "elementType": "labels.icon",
-        "stylers": [
-            {
-                "visibility": "off"
-            }
-        ]
-    },
-    {
-        "featureType": "transit",
-        "elementType": "all",
-        "stylers": [
-            {
-                "visibility": "off"
-            }
-        ]
-    },
-    {
-        "featureType": "water",
-        "elementType": "all",
-        "stylers": [
-            {
-                "color": "#69c8f2"
-            },
-            {
-                "visibility": "on"
-            },
-            {
-                "saturation": "-1"
-            }
-        ]
-    }
-]
-        });
-
-
-          var marker = new google.maps.Marker({
-            position: {lat: 59.8887997, lng: 30.2776553},
-            map: map,
-            // icon: 'img/mark.png'
-          });
-
-
-          }
-    </script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBmnk4RCDwjSucIJ2WXRnLkuCrsWR4DUM4&callback=initMap"></script>
 	<script src="js/scripts.min.js"></script>
 
 </body>

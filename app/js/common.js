@@ -2,13 +2,6 @@ $(function() {
 
 $(".preloader").delay(1000).fadeOut();
 
-$(".nav").on("click","a", function (event) {
-  event.preventDefault();
-    var id  = $(this).attr('href'),
-    top = $(id).offset().top;
-  $('body,html').animate({scrollTop: top - 90}, 'slow', 'swing');
-});
-
 //------------------------------гамбургер-----------------------------
 $('.hamburger--3dx').click(function() {
   $(this).toggleClass('is-active');
@@ -106,71 +99,13 @@ $('.hamburger--3dx').click(function() {
 
 //----------------------------------------fixed----------------------------------
   $(window).scroll(function(){
-      if($(this).scrollTop()>50){
+      if($(this).scrollTop()>20){
           $('.header').addClass('header-active');
       }
-      else if ($(this).scrollTop()<50){
+      else if ($(this).scrollTop()<20){
           $('.header').removeClass('header-active');
       }
   });
-
-
-( function( window, document )
-{
-  'use strict';
-
-  var file     = 'img/symbols.html',
-      revision = 1.2;
-
-  if( !document.createElementNS || !document.createElementNS( 'http://www.w3.org/2000/svg', 'svg' ).createSVGRect )
-      return true;
-
-  var isLocalStorage = 'localStorage' in window && window[ 'localStorage' ] !== null,
-      request,
-      data,
-      insertIT = function()
-      {
-          document.body.insertAdjacentHTML( 'afterbegin', data );
-      },
-      insert = function()
-      {
-          if( document.body ) insertIT();
-          else document.addEventListener( 'DOMContentLoaded', insertIT );
-      };
-
-  if( isLocalStorage && localStorage.getItem( 'inlineSVGrev' ) == revision )
-  {
-    data = localStorage.getItem( 'inlineSVGdata' );
-    if( data )
-    {
-        insert();
-        return true;
-    }
-  }
-
-  try
-  {
-    request = new XMLHttpRequest();
-    request.open( 'GET', file, true );
-    request.onload = function()
-      {
-        if( request.status >= 200 && request.status < 400 )
-          {
-            data = request.responseText;
-            insert();
-            if( isLocalStorage )
-            {
-              localStorage.setItem( 'inlineSVGdata',  data );
-              localStorage.setItem( 'inlineSVGrev',   revision );
-            }
-        }
-    }
-    request.send();
-  }
-  catch( e ){}
-
-}( window, document ) );
-
 
 });
 
