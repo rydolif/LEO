@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="utf-8">
+	<title>LEO</title>
+	<meta name="description" content="">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="icon" href="img/favicon.ico">
+	<meta name="theme-color" content="#000">
+
+	<link rel="stylesheet" href="css/main.min.css">
+</head>
+
+<body>
+
+	<div class="preloader">
+		<div class="pulse"></div>
+	</div>
+
+	<header class="header">
+		<div class="container">
+			<div class="header__container">
+		
+				<div class="header__logo">
+					<a href="index.html"><img src="img/logo.svg" alt="logo" width="215" height="50"></a>
+				</div>
+
+				<button class="hamburger hamburger--3dx" type="button">
+						<span class="hamburger-box">
+							<span class="hamburger-inner"></span>
+						</span>
+				</button>
+
+				<nav class="nav">
+					<ul>
+						<li><a href="#index">Главная</a></li>
+						<li><a href="#tasks">Описание</a></li>
+						<li><a href="#why">Возможности</a></li>
+						<li><a href="#contacts">Контакты</a></li>
+					</ul>
+
+					<a href="tel:+7(812)309-38-35" class="nav__tel"><span>+7 (812)</span> 309-38-35</a>
+					<a href="#" class="nav__order order_open">Заказать звонок</a>
+				</nav>
+
+				<div class="header__contact">
+					<a href="tel:+7(812)309-38-35" class="tel"><span>+7 (812)</span> 309-38-35</a>
+					<a href="#" class="order order_open">Заказать звонок</a>
+				</div>
+
+			</div>
+		</div>
+	</header>
+
+	<main class="main">
+
+
+	</main>
+
+	<footer class="footer">
+
+		<div class="container">
+
+			<div class="footer__container header__container">
+		
+				<div class="header__logo footer__logo">
+					<a href="index.html"><img src="img/logo.svg" alt="logo" width="215" height="50"></a>
+				</div>
+
+				<nav class="nav">
+					<ul>
+						<li><a href="#index">Главная</a></li>
+						<li><a href="#tasks">Описание</a></li>
+						<li><a href="#why">Возможности</a></li>
+						<li><a href="#contacts">Контакты</a></li>
+					</ul>
+				</nav>
+
+				<div class="header__contact footer__contact">
+					<a href="tel:+7(812)309-38-35" class="tel"><span>+7 (812)</span> 309-38-35</a>
+					<a href="#" class="order order_open">Заказать звонок</a>
+				</div>
+
+			</div>
+		</div>
+
+		<div class="footer__copy">
+			<p>© 2018   DataCube | Все права защищены. | Сделано в <a href="bestslide.ru">bestslide.ru</a></p>
+		</div>
+
+	</footer>
+
+	<div class="modal modal-base" id="order">
+
+		<img src="img/modal-bg.png" alt="modal">
+
+			<form action="sendmail.php" class="order-form" method="post">
+
+				<input type="hidden" name="subject" value="Заказать звонок">
+			
+				<h2>Заказать звонок<span> Заполните форму и наш менеджер свяжется с вами в течение 5 минут</span></h2>
+
+				<button class="hamburger hamburger--elastic is-active order_close" type="button">
+					<span class="hamburger-box">
+						<span class="hamburger-inner"></span>
+					</span>
+				</button>
+
+				<div class="form-group">
+					<input type="text" class="form__field" name="name" placeholder="Введите имя" required>
+				</div>
+
+				<div class="form-group">
+					<input type="tel" name="phone" class="form__field" required placeholder="Введите телефон" pattern="\+7\s\([0-9]{3}\)\s[0-9]{3}-[0-9]{2}-[0-9]{2}">
+				</div>
+
+				<button type="submit" class="btn" name="submit" value="отправить">Заказать звонок</button>
+
+			</form>
+	</div>
+
+	<div class="modal" id="presentation">
+
+		<img src="img/modal-bg.png" alt="modal">
+
+			<form action="sendmail.php" class="presentation-form" method="post">
+
+				<input type="hidden" name="subject" value="Скачайте бесплатно презентацию">
+			
+				<h2>Скачайте бесплатно<span> Презентацию <b>DataCube</b> <br>и узнайте подробне о cистеме архивного хранения</span></h2>
+
+				<button class="hamburger hamburger--elastic is-active presentation_close" type="button">
+					<span class="hamburger-box">
+						<span class="hamburger-inner"></span>
+					</span>
+				</button>
+
+				<div class="form-group">
+					<input type="text" class="form__field" name="name" placeholder="Введите имя" required>
+				</div>
+
+				<div class="form-group">
+					<input type="tel" name="phone" class="form__field" required placeholder="Введите телефон" pattern="\+7\s\([0-9]{3}\)\s[0-9]{3}-[0-9]{2}-[0-9]{2}">
+				</div>
+
+				<button type="submit" class="btn" name="submit" value="отправить">Скачать презентацию</button>
+
+			</form>
+	</div>
+
+	<div class="modal modal-base" id="consultation">
+
+		<img src="img/modal-bg.png" alt="modal">
+
+			<form action="sendmail.php" class="consultation-form" method="post">
+
+				<input type="hidden" name="subject" value="Заказать консультацию">
+			
+				<h2>Заказать консультацию<span> <br>Заполните форму и наш менеджер свяжется с вами в течение 5 минут</span></h2>
+
+				<button class="hamburger hamburger--elastic is-active consultation_close" type="button">
+					<span class="hamburger-box">
+						<span class="hamburger-inner"></span>
+					</span>
+				</button>
+
+				<div class="form-group">
+					<input type="text" class="form__field" name="name" placeholder="Введите имя" required>
+				</div>
+
+				<div class="form-group">
+					<input type="tel" name="phone" class="form__field" required placeholder="Введите телефон" pattern="\+7\s\([0-9]{3}\)\s[0-9]{3}-[0-9]{2}-[0-9]{2}">
+				</div>
+
+				<button type="submit" class="btn" name="submit" value="отправить">Заказать консультацию</button>
+
+			</form>
+	</div>
+
+	<div class="modal" id="thanks">
+			<button class="hamburger hamburger--elastic is-active thanks_close modal__close" type="button">
+			  <span class="hamburger-box">
+			    <span class="hamburger-inner"></span>
+			  </span>
+	  	</button>
+
+	  	<img src="img/icon/success.svg" alt="success" width="100" height="100">
+			<h2>Спасибо!<br><span>Результат придёт в течении 5 минут</span></h2>
+	</div>
+
+
+     <script>
+      function initMap() {
+        var uluru = {lat: 59.8887997, lng: 30.2736553};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 16,
+          center: uluru,
+          styles: [
+    {
+        "featureType": "administrative",
+        "elementType": "labels.text.fill",
+        "stylers": [
+            {
+                "color": "#444444"
+            }
+        ]
+    },
+    {
+        "featureType": "administrative.locality",
+        "elementType": "all",
+        "stylers": [
+            {
+                "hue": "#ff0000"
+            }
+        ]
+    },
+    {
+        "featureType": "administrative.neighborhood",
+        "elementType": "all",
+        "stylers": [
+            {
+                "hue": "#ff0000"
+            }
+        ]
+    },
+    {
+        "featureType": "landscape",
+        "elementType": "all",
+        "stylers": [
+            {
+                "color": "#f2f2f2"
+            }
+        ]
+    },
+    {
+        "featureType": "poi",
+        "elementType": "all",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "road",
+        "elementType": "all",
+        "stylers": [
+            {
+                "saturation": -100
+            },
+            {
+                "lightness": 45
+            }
+        ]
+    },
+    {
+        "featureType": "road.highway",
+        "elementType": "all",
+        "stylers": [
+            {
+                "visibility": "simplified"
+            }
+        ]
+    },
+    {
+        "featureType": "road.arterial",
+        "elementType": "labels.icon",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "transit",
+        "elementType": "all",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "water",
+        "elementType": "all",
+        "stylers": [
+            {
+                "color": "#69c8f2"
+            },
+            {
+                "visibility": "on"
+            },
+            {
+                "saturation": "-1"
+            }
+        ]
+    }
+]
+        });
+
+
+          var marker = new google.maps.Marker({
+            position: {lat: 59.8887997, lng: 30.2776553},
+            map: map,
+            // icon: 'img/mark.png'
+          });
+
+
+          }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBmnk4RCDwjSucIJ2WXRnLkuCrsWR4DUM4&callback=initMap"></script>
+	<script src="js/scripts.min.js"></script>
+
+</body>
+</html>

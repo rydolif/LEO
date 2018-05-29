@@ -1,0 +1,517 @@
+@import "vars"
+
+@media only screen and (max-width : 1200px)
+	.header
+		&__container
+			padding: 10px 0
+
+		&__logo
+			width: 150px
+			img
+				width: 150px
+
+		nav
+			li
+				margin-right: 30px
+
+				&:last-child
+					margin-right: 0
+
+		.tel
+			font-size: 18px
+
+	.section__header
+		padding: 200px 0
+
+	.tasks
+		padding: 100px 0
+
+		h4
+			margin-left: 0
+
+			br
+				display: none
+
+		&__block
+			margin-bottom: 30px
+
+		&__img
+			position: relative
+			margin: 0 auto 20px auto
+
+		&__title
+			margin-bottom: 20px
+
+	.architecture
+		padding-bottom: 70px
+
+		li
+			position: relative
+			display: flex
+			flex-direction: row-reverse
+			margin-bottom: 105px
+			text-align: right
+
+			&:nth-child(1)
+				right: 35%
+
+			&:nth-child(2)
+				right: 54%
+
+			&:nth-child(3)
+				flex-direction: row
+				right: auto
+				left: -25px
+				text-align: left
+
+			&:nth-child(4)
+				right: 63%
+
+			&:nth-child(5)
+				flex-direction: row
+				right: auto
+				left: 2%
+				text-align: left
+				margin-bottom: 50px
+
+			&:last-child
+				right: 60%
+				margin-bottom: 0
+
+	.why
+		padding-bottom: 40px
+		background-position: -380px -20px
+	
+	.about
+		padding: 70px 0
+		background-position: 300px 0
+
+
+@media only screen and (max-width : 992px)
+	h1, h2
+		font-size: 38px
+
+	h2
+		&::before
+			font-size: 120px
+
+	h3
+		font-size: 30px
+
+	h1
+		margin-bottom: 30px
+
+		br
+			display: none
+
+	.header
+		&__container
+			padding-right: 70px
+
+		.nav
+			position: fixed
+			display: block
+			width: 270px
+			height: 100%
+			flex-direction: column
+			right: -100%
+			top: 70px
+			z-index: -1
+			background-color: rgba(#fff, .95)
+			transition: all .3s
+
+			ul
+				display: flex
+				flex-direction: column
+				justify-content: center
+				margin-top: 40px
+				margin-left: 40px
+
+			li
+				margin: 0
+				margin-bottom: 10px
+
+			a
+				color: $accent
+				display: block
+				&::before
+					content: ''
+					width: 0
+					transform: scale(0)
+					transition: all .3s
+					position: absolute
+					bottom: 0
+					width: 80%
+					height: 1px
+					background-color: $accent
+					z-index: -1
+
+				&:hover
+					color: $accent
+					text-decoration: none
+					&::before
+						transform: scale(1)
+
+				&:focus
+					color: $accent
+					text-decoration: none
+					&::before
+						transform: scale(1)
+
+			&__order
+				display: block
+				margin-left: 40px
+
+			&__tel
+				display: block
+				margin-left: 40px
+
+		.hamburger
+			display: block
+			z-index: 1001
+			right: 15px
+
+		.hamburger-box
+			right: 0
+
+		.nav-active
+			right: 0px
+
+	.section__header
+		padding: 100px 0
+
+	.premises
+		padding: 60px 0
+
+		&__container
+			&::before
+				font-size: 120px
+
+		h3
+			margin-bottom: 20px
+
+		&__block
+			padding: 30px
+			width: 50%
+
+			svg
+				margin-bottom: 15px
+
+	.tasks
+		h2
+			margin-bottom: 0
+
+		h3
+			margin-bottom: 30px
+
+		&__block
+			width: 48%
+
+			&:nth-child(n+3)
+				margin-bottom: 30px
+
+			&:nth-child(n+4)
+				margin-bottom: 0
+
+	.architecture
+		padding-bottom: 40px
+
+		p
+			br
+				display: none
+
+		ul
+			display: flex
+			flex-direction: row
+			justify-content: space-between
+			flex-wrap: wrap
+
+
+		li
+			margin-bottom: 30px
+			right: auto
+			left: auto
+			width: 50%
+
+			&:nth-child(1)
+				flex-direction: row
+				right: auto
+				text-align: left
+
+			&:nth-child(2)
+				flex-direction: row
+				right: auto
+				text-align: left
+
+			&:nth-child(3)
+				flex-direction: row
+				right: auto
+				left: auto
+
+			&:nth-child(4)
+				flex-direction: row
+				right: auto
+				text-align: left
+
+			&:nth-child(5)
+				flex-direction: row
+				right: auto
+				left: auto
+				text-align: left
+				margin-bottom: 30px
+
+			&:last-child
+				flex-direction: row
+				text-align: left
+				right: auto
+				left: auto
+
+		&__bg
+			display: none
+
+		&__img
+			display: none
+
+		&__circle
+			width: 40px
+			height: 40px
+			margin: 0 20px 0 0
+
+			&::before
+				width: 25px
+				height: 25px
+
+			&::after
+				width: 15px
+				height: 15px
+
+		&__block
+			width: 70%
+	
+	.why
+		background-position: -374px -90px
+		padding-top: 40px
+
+		h3
+			margin-bottom: 35px
+
+		p
+			br
+				display: none
+				
+		&__block
+			margin-bottom: 25px
+			width: 32%
+	
+	.about
+
+		&__bg
+			left: 50%
+	
+	.footer
+		&__container
+			flex-direction: column
+			padding: 15px 0
+
+		&__logo
+			margin-bottom: 20px
+
+		.nav
+			margin-bottom: 20px
+
+		&__copy
+			padding: 15px 0
+	
+	.modal
+		width: 320px
+		padding: 30px
+
+		h2
+			font-size: 24px
+			margin-bottom: 30px
+			span
+				font-size: 18px
+
+		img
+			display: none
+	
+		.form-group
+			width: 100%
+
+		.btn
+			width: 100%
+	
+	#thanks
+		width: 320px
+		padding: 30px
+
+
+@media only screen and (max-width : 767px)
+	h2
+		&::before
+			top: -40px
+			font-size: 90px
+
+	.tel
+		display: none
+
+	.section__header
+		padding-bottom: 80px
+	
+	.architecture
+		&__container
+			&::before
+				font-size: 90px
+
+	.premises
+		padding: 30px 0
+
+		&__container
+			&::before
+				font-size: 90px
+				
+		h2
+			&::before
+				top: -40px
+
+	.why
+		background-image: none
+
+		&__block
+			width: 48%
+
+	.about
+		padding: 30px 0
+
+		&__container
+			&::before
+				font-size: 90px
+
+		h2
+			margin-bottom: 15px
+
+		h4
+			margin-bottom: 0
+
+		p
+			br
+				display: none
+
+		&__bg
+			display: none
+	
+	#map
+		height: 400px
+
+	.map
+		p
+			margin-bottom: 20px
+
+		ul
+			margin-bottom: 20px
+
+		&__block
+			position: relative
+			top: 0
+			width: 100%
+			padding: 30px
+			text-align: center
+			box-shadow: none
+
+
+	.footer
+		.tel
+			display: block
+
+
+
+@media only screen and (max-width : 576px)
+	h1, h2
+		font-size: 35px
+
+	h3
+		font-size: 24px
+		
+	.section__header
+		text-align: center
+
+	.architecture
+		h4
+			br
+				display: none
+
+		ul
+			flex-direction: column
+
+		li
+			width: 100%
+			text-align: center
+
+	.why
+
+		&__circle
+			margin-bottom: 15px
+
+
+@media only screen and (max-width : 480px)
+	h2
+		&::before
+			display: none
+
+	.premises
+		&__container
+			&::before
+				display: none
+					
+
+		&__block
+			width: 100%
+
+	.architecture
+		&__container
+			&::before
+				display: none
+
+	.about
+		&__container
+			&::before
+				display: none
+
+	.tasks
+		background-image: none
+		background-color: $accent
+		padding: 40px 0
+		&__block
+			width: 100%
+
+			&:nth-child(n+4)
+				margin-bottom: 30px
+
+			&:last-child
+				margin-bottom: 0
+
+	.footer
+		.nav
+			li
+				margin-right: 20px
+
+				&:last-child
+					margin-right: 0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
