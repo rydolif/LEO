@@ -50,19 +50,21 @@ h1
 h2
 	position: relative
 	font-size: 48px
-	margin-bottom: 60px
 
 	&::after
 		content: ""
-		position: absolute
-		left: 0
-		bottom: -15px
+		display: block
 		width: 70%
 		height: 1px
 		background-color: $accent
+		margin-top: 20px
+		margin-bottom: 40px
 
-
-
+h3
+	font-family: $fonts
+	font-weight: 700
+	font-size: 18px
+	margin-bottom: 10px
 
 
 ul
@@ -415,3 +417,19 @@ body input:required:valid, body textarea:required:valid
 		
 		100%
 			transform: scale(0)
+
+//----------------------scale-slider-------------------
+
+@keyframes scale
+		0%
+			transform: scale(1)
+		
+		100%
+			transform: scale(1.2)
+
+@keyframes scale-back
+		0%
+			transform: scale(1.2)
+		
+		100%
+			transform: scale(1)

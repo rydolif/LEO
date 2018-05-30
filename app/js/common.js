@@ -2,6 +2,29 @@ $(function() {
 
 $(".preloader").delay(1000).fadeOut();
 
+//-----------------------------slider---------------------------
+var swiper = new Swiper('.slider__container', {
+  slidesPerView: 4,
+  spaceBetween: 110,
+  navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+  },
+  breakpoints: {
+    576: {
+      slidesPerView: 1,
+      spaceBetween: 20
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 20
+    },
+    1200: {
+      slidesPerView: 3,
+      spaceBetween: 30
+    }
+  }
+});
 //------------------------------гамбургер-----------------------------
 $('.hamburger--3dx').click(function() {
   $(this).toggleClass('is-active');
