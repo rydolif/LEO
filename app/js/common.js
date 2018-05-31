@@ -7,8 +7,8 @@ var swiper = new Swiper('.slider__container', {
   slidesPerView: 4,
   spaceBetween: 110,
   navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.slider__arrow-next',
+      prevEl: '.slider__arrow-prev',
   },
   breakpoints: {
     576: {
@@ -22,6 +22,23 @@ var swiper = new Swiper('.slider__container', {
     1200: {
       slidesPerView: 3,
       spaceBetween: 30
+    }
+  }
+});
+
+var swiper = new Swiper('.trend__container', {
+  slidesPerView: 3,
+  spaceBetween: 2,
+  navigation: {
+      nextEl: '.trend__arrow-prev',
+      prevEl: '.trend__arrow-next',
+  },
+  breakpoints: {
+    576: {
+      slidesPerView: 1,
+    },
+    768: {
+      slidesPerView: 2,
     }
   }
 });

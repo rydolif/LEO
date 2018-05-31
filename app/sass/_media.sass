@@ -1,4 +1,19 @@
 @import "vars"
+@media only screen and (max-width : 1400px)
+	.card
+		h4
+			font-size: 25px
+
+		p
+			margin-bottom: 30px
+
+		&__wrap
+			&_block
+				right: 20px
+				left: 20px
+				bottom: 20px
+				top: 20px
+				padding: 20px
 
 @media only screen and (max-width : 1200px)
 	.header
@@ -36,8 +51,31 @@
 			margin-bottom: 15px
 
 	.slider
+		padding-bottom: 80px
 		&__container
 			width: 80%
+
+	.catalog
+		&__content
+			padding-left: 0
+			padding-top: 0
+
+	.trend
+		padding: 80px 0
+		&__container
+			margin-left: 0
+
+	.content
+		&__img
+			left: 38%
+
+	.footer
+		padding: 20px 0
+		&__nav
+			padding-top: 0
+
+		&__info
+			padding-top: 0
 
 @media only screen and (max-width : 992px)
 	h1
@@ -131,9 +169,51 @@
 			text-align: center
 
 	.slider
+		padding-bottom: 50px
 		a
 			p
 				margin-bottom: 15px
+
+	.card
+		&__wrap
+			&_block
+				padding: 15px
+
+	.catalog
+		padding: 50px 0
+
+		&::before
+			font-size: 130px
+
+		.sub-title
+			margin-bottom: 20px
+
+	.trend
+		padding: 40px 0
+		text-align: center
+
+		h2
+			&::after
+				margin: 10px auto 20px auto
+
+		.sub-title
+			margin: 0 auto 10px auto
+			display: inline-block
+
+		.swiper-slide
+			p
+				text-align: center
+
+	.content
+		&::before
+			font-size: 130px
+
+		p
+			margin-bottom: 20px
+
+		&__img
+			left: 45%
+
 
 @media only screen and (max-width : 767px)
 	h1
@@ -142,9 +222,15 @@
 
 	h2
 		font-size: 30px
+		&::after
+			margin: 10px auto 20px auto
 
 		br
 			display: none
+
+	.sub-title
+		text-align: center
+		display: inline
 
 	.section-header
 		&__content
@@ -163,7 +249,75 @@
 		&::after
 			display: none
 
+	.card
+		flex-wrap: wrap
+		&__wrap
+			width: 50%
 
+			&:last-child
+				margin: 0 auto
+
+	.catalog
+		text-align: center
+		padding: 60px 0
+
+		&::before
+			font-size: 100px
+			bottom: 0
+
+		.sub-title
+			text-align: left
+			display: inline
+
+		p
+			margin-bottom: 20px
+
+		.btn
+			margin-bottom: 30px
+
+	.content
+		padding: 0 0 40px 0
+		text-align: center
+
+		&__img
+			display: none
+
+	.join
+		padding: 40px 0
+		p
+			margin-bottom: 30px
+			br
+				display: none
+	
+	.footer
+		&__container
+			flex-direction: column-reverse
+			justify-content: center
+			align-items: center
+
+		&__block
+			text-align: center
+			margin-bottom: 30px
+
+		.header__logo
+			margin-bottom: 20px
+
+		&__nav
+			justify-content: space-around
+			width: 100%
+
+			ul
+				width: 50%
+				text-align: center
+
+		&__info
+			flex-direction: row
+			justify-content: space-around
+			width: 100%
+			margin-bottom: 30px
+
+			.tel
+				margin-bottom: 0
 
 @media only screen and (max-width : 576px)
 	.superiority
@@ -171,11 +325,35 @@
 
 	.slider
 		text-align: center
+
 		&__block
 			a
 				width: 80%
 				margin: 0 auto
 
+	.card
+		flex-wrap: wrap
+		h4
+			font-size: 36px
+
+		&__wrap
+			width: 100%
+
+			&_block
+				right: 30px
+				left: 30px
+				bottom: 30px
+				top: 30px
+				padding: 30px
+
+	.catalog
+		&::before
+			display: none
+
+	.trend
+		.btn
+			left: 50%
+			right: auto
 
 
 @media only screen and (max-width : 480px)
@@ -197,8 +375,17 @@
 		&__content
 			padding: 20px
 
+	.card
+		h4
+			font-size: 28px
 
+	.trend
+		.btn
+			padding: 0
 
+	.footer
+		.tel
+			display: block
 
 
 

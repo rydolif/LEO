@@ -58,7 +58,7 @@
 	color: #fff
 	font-weight: 600
 	position: relative
-	font-size: 16px
+	font-size: 14px
 	z-index: 1
 	&::before
 		content: ''
@@ -104,7 +104,52 @@
 		height: 1px
 		background-color: $accent
 
+.btn-pluse
+	position: absolute
+	right: 30px
+	bottom: 15px
+	white-space: nowrap
+	width: 45px
+	height: 45px
+	font-size: 12px
+	padding: 17px 0
+	overflow: hidden
+	animation: btn-pluse_back .3s linear 1 forwards
+	b
+		opacity: 0
 
+	&::before
+		content: ""
+		position: absolute
+		right: 8px
+		top: 50%
+		transform: translate(0, -50%)
+		width: 30px
+		height: 30px
+		background-color: #fff
+		border-radius: 50%
+
+	&::after
+		content: "+"
+		position: absolute
+		top: 50%
+		right: 18px
+		transform: translate(0, -50%)
+		color: #000
+
+@keyframes btn-pluse
+		0%
+			width: 45px
+		
+		100%
+			width: 170px
+
+@keyframes btn-pluse_back
+		0%
+			width: 170px
+		
+		100%
+			width: 45px
 //--------------------------------------------------------end-base-class-------------------------------------
 
 .header
@@ -173,7 +218,7 @@
 		margin-bottom: 50px
 
 	&__content
-		padding: 95px 0
+		padding: 70px 0
 		border: 10px solid transparent
 		border-image: url(../img/header-border.jpg) 10 stretch
 
@@ -322,10 +367,13 @@
 				width: 100%
 				height: 50%
 				background-color: #e7c0b6
+	
+	&__box
 
 	&__container
 		width: 970px
 		padding-top: 30px
+		overflow: hidden
 
 	&__block
 		display: flex
@@ -338,41 +386,293 @@
 			height: 200px
 			margin-bottom: 25px
 
-	.swiper-button-prev
-		background-image: url(../img/icon/arrow.svg)
-		width: 40px
-		height: 40px
-		outline: none
-		background-size: 40px 40px
-		left: 15px
-
-	.swiper-button-next
-		background-image: url(../img/icon/arrow.svg)
-		transform: rotate(-180deg)
-		width: 40px
-		height: 40px
-		outline: none
-		background-size: 40px 40px
-		right: 15px
-
 .card
 	display: flex
 	flex-direction: row
 
-
 	&__wrap
+		position: relative
 		width: 33.333%
 
-		&_item
-			border-image: url(../img/header-border.jpg) 10 stretch
+		&:hover
+			h4
+				color: $accent
 
+			&:nth-child(1)
+				.card__wrap_block
+					border-image: url(../img/card/1-inverted.jpg) 10 stretch
+
+			&:nth-child(2)
+				.card__wrap_block
+					border-image: url(../img/card/2-inverted.jpg) 10 stretch
+
+			&:nth-child(3)
+				.card__wrap_block
+					border-image: url(../img/card/3-inverted.jpg) 10 stretch
+
+		&_block
+			position: absolute
+			right: 50px
+			left: 50px
+			bottom: 50px
+			top: 50px
+			border: 10px solid transparent
+			display: flex
+			flex-direction: column
+			justify-content: flex-end
+			padding: 50px
+			transition: all .3s
+
+		p
+			color: #fff
+			margin-bottom: 50px
 
 		img
 			width: 100%
 			height: 100%
 
+.catalog
+	position: relative
+	padding-top: 80px
+	padding-bottom: 120px
+
+	&::before
+		content: attr(data-bg)
+		position: absolute
+		left: 5%
+		bottom: -60px
+		font-weight: 700
+		color: #f5f2ed
+		font-size: 200px
+		line-height: 1
+
+	h2
+		line-height: 1.3
+
+	p
+		margin-bottom: 50px
+
+	&__wrap
+		position: relative
+		display: flex
+		justify-content: center
+		align-items: center
+		z-index: 1
+
+		img
+			box-shadow: 0 20px 50px rgba(0,0,0, .25)
+			width: auto
+			height: auto
+
+	&__lining
+		position: absolute
+		width: 100%
+		height: 220px
+		background-image: linear-gradient(to right, #d18973, #e0b894)
+		z-index: -1
+
+	&__content
+		padding-top: 40px
+		padding-left: 70px
+
+	.btn
+		padding: 20px 60px
+
+.trend
+	padding: 100px 0
+	
+	&__box
+		overflow: hidden
+		box-shadow: 0 5px 30px rgba(35, 42, 50, .25)
+
+	p
+		margin-bottom: 30px
+
+	&__arrow
+		position: relative
+		height: 40px
+
+	.swiper-slide
+		position: relative
+		background-color: #fff
+		padding: 10px 30px 105px 30px
+		color: #232a32
+		img
+			animation: scale-back .2s ease-in forwards
+
+		&:hover
+			text-decoration: none
+			box-shadow: 0 5px 30px rgba(35, 42, 50, .25)
+			z-index: 1
+			transition: all .3s
+
+			img
+				animation: scale .2s ease-in forwards
+
+			.btn-pluse
+				animation: btn-pluse .2s ease-in forwards
+				b
+					opacity: 1
+					transition: all .5s
+
+		p
+			display: block
+			margin-bottom: 25px
+			text-transform: uppercase
+			color: #667280
+			font-size: 12px
+
+		span
+			position: relative
+			font-size: 18px
+			font-weight: 700
+			z-index: 1
+			padding: 0 5px
+			&::after
+				content: ""
+				position: absolute
+				bottom: 0
+				left: 0
+				z-index: -1
+				width: 100%
+				height: 50%
+				background-color: #e7c0b6
+
+	&__container
+		overflow: inherit
+
+	.swiper-wrapper
+		background-color: rgba(35, 42, 50, .25)
+
+	.swiper-button-prev
+		position: absolute
+		left: 0
+		bottom: 0
+		top: auto
+
+	.swiper-button-next
+		position: absolute
+		right: 0
+		left: 50px
+		bottom: 0
+		top: auto
+		transform: rotate(-180deg)
+
+.content
+	position: relative
+	padding-bottom: 185px
+	padding-top: 110px
+
+	&::before
+		content: attr(data-bg)
+		position: absolute
+		left: 10%
+		bottom: -60px
+		font-weight: 700
+		color: #f5f2ed
+		font-size: 200px
+		line-height: 1
+
+	.sub-title
+		margin-bottom: 50px
+
+	p
+		margin-bottom: 55px
+
+	&__img
+		position: absolute
+		top: 0
+		left: 45%
+
+.join
+	background-image: url(../img/join-bg.jpg)
+	background-size: cover
+	background-repeat: no-repeat
+	padding: 45px 0
+	text-align: center
+	color: #fff
+
+	&__container
+		padding: 60px 0
+		border: 10px solid transparent
+		border-image: url(../img/join-border.jpg) 10
+
+	h2
+		&::after
+			margin: 20px auto 40px auto
+			width: 25%
+
+	p
+		margin-bottom: 55px
+
+
 .footer
-	height: 500px
+	background-color: #232a32
+	padding-top: 20px
+	padding-bottom: 60px
+	
+	ul
+		a
+			position: relative
+			color: #fff
+			text-transform: uppercase
+			z-index: 1
+			&::before
+				content: ''
+				width: 0
+				transform: scale(0)
+				transition: all .3s
+				position: absolute
+				bottom: 0
+				width: 100%
+				height: 1px
+				background-color: $accent
+				z-index: -1
+
+			&:hover
+				color: $accent
+				text-decoration: none
+				&::before
+					transform: scale(1)
+
+			&:focus
+				color: $accent
+				text-decoration: none
+				&::before
+					transform: scale(1)
+	li
+		margin-bottom: 20px
+	
+	&__nav
+		padding-top: 30px
+		display: flex
+		flex-direction: row
+		justify-content: space-around
+		flex-grow: 1
+
+	&__container
+		display: flex
+		flex-direction: row
+		justify-content: space-between
+		align-items: flex-start
+	
+	&__info
+		padding-top: 30px
+		display: flex
+		flex-direction: column
+
+	.tel
+		margin-bottom: 15px
+		font-size: 14px
+		&::before
+			bottom: 0
+
+	&__copy
+		color: #3e4b59
+		text-transform: uppercase
+
+	.header__logo
+		margin-bottom: 65px
 
 
 
