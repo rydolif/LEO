@@ -3,6 +3,7 @@ $(function() {
 $(".preloader").delay(1000).fadeOut();
 
 //-----------------------------slider---------------------------
+
 var swiper = new Swiper('.slider__container', {
   slidesPerView: 4,
   spaceBetween: 110,
@@ -42,6 +43,7 @@ var swiper = new Swiper('.trend__container', {
     }
   }
 });
+
 //------------------------------гамбургер-----------------------------
 $('.hamburger--3dx').click(function() {
   $(this).toggleClass('is-active');

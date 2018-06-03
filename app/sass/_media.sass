@@ -55,7 +55,7 @@
 		&__container
 			width: 80%
 
-	.catalog
+	.index-catalog
 		&__content
 			padding-left: 0
 			padding-top: 0
@@ -179,7 +179,7 @@
 			&_block
 				padding: 15px
 
-	.catalog
+	.index-catalog
 		padding: 50px 0
 
 		&::before
@@ -213,7 +213,27 @@
 
 		&__img
 			left: 45%
+	
+	.catalog
 
+		&__list
+			padding-top: 15px
+
+		&-content
+			padding-top: 30px
+
+			&__container
+				justify-content: center
+
+			&__block
+				width: 33%
+				margin-bottom: 40px
+				&:after
+					bottom: -40px
+
+				&:nth-child(n+4)
+					margin-top: 55px
+					margin-top: 20px
 
 @media only screen and (max-width : 767px)
 	h1
@@ -239,6 +259,7 @@
 			p
 				font-size: 20px
 				margin-bottom: 20px
+				line-height: 1.4
 
 				br
 					display: none
@@ -257,7 +278,7 @@
 			&:last-child
 				margin: 0 auto
 
-	.catalog
+	.index-catalog
 		text-align: center
 		padding: 60px 0
 
@@ -319,6 +340,37 @@
 			.tel
 				margin-bottom: 0
 
+	.page
+		h1
+			font-size: 3a5px
+
+	.catalog
+		&__nav
+			ul
+				flex-wrap: wrap
+
+			li
+				margin-bottom: 10px
+				&:nth-child(n+2)
+					margin-bottom: 0px
+
+		&__list
+			ul
+				flex-wrap: wrap
+				justify-content: flex-start
+
+			li
+				margin-bottom: 10px
+				&:nth-child(n+2)
+					margin-bottom: 0px
+
+
+		&-content
+			&__block
+				width: 50%
+				padding: 0 15px 20px 15px
+
+
 @media only screen and (max-width : 576px)
 	.superiority
 		padding: 50px 0 30px 0
@@ -346,7 +398,7 @@
 				top: 30px
 				padding: 30px
 
-	.catalog
+	.index-catalog
 		&::before
 			display: none
 
@@ -365,6 +417,9 @@
 
 	.btn
 		padding: 15px 45px
+
+	.btn-pluse
+		padding: 17px 0
 
 	.tel
 		display: none
@@ -387,8 +442,25 @@
 		.tel
 			display: block
 
-
-
+	.page
+		h1
+			font-size: 30px
+	
+	.catalog
+		&__nav
+			ul
+				flex-direction: column
+				align-items: center
+			li
+				&:nth-child(n+2)
+					margin-bottom: 10px
+				&:last-child
+					margin-bottom: 0
+		&-content
+			&__block
+				&_img
+					overflow: hidden
+	
 
 
 
