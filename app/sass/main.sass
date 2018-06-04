@@ -107,11 +107,11 @@
 .btn-pluse
 	position: absolute
 	right: 30px
-	bottom: 15px
+	bottom: -20px
 	white-space: nowrap
-	width: 45px
-	height: 45px
-	padding: 17px 0
+	width: 46px
+	height: 46px
+	padding: 16px 0
 	overflow: hidden
 	animation: btn-pluse_back .3s linear 1 forwards
 	font-size: 12px
@@ -135,34 +135,64 @@
 		content: "+"
 		position: absolute
 		top: 50%
-		right: 18px
+		right: 17px
 		transform: translate(0, -50%)
 		color: #000
+		font-size: 16px
+		font-weight: 600
 
-@keyframes btn-pluse
-		0%
-			width: 45px
-		
-		100%
-			width: 170px
+	@keyframes btn-pluse
+			0%
+				width: 45px
+			
+			100%
+				width: 170px
 
-@keyframes btn-pluse_back
-		0%
-			width: 170px
-		
-		100%
-			width: 45px
-
+	@keyframes btn-pluse_back
+			0%
+				width: 170px
+			
+			100%
+				width: 45px
 
 .data-bg
 	position: relative
+	z-index: 1
 	&::before
 		content: attr(data-bg)
 		position: absolute
+		z-index: -1
 		font-weight: 700
 		color: #f5f2ed
 		font-size: 200px
 		line-height: 1
+
+.link
+	position: relative
+	z-index: 1
+	&::before
+		content: ''
+		width: 0
+		transform: scale(0)
+		transition: all .3s
+		position: absolute
+		bottom: 0
+		width: 100%
+		height: 1px
+		background-color: $accent
+		z-index: -1
+
+	&:hover
+		color: $accent
+		text-decoration: none
+		&::before
+			transform: scale(1)
+
+	&:focus
+		color: $accent
+		text-decoration: none
+		&::before
+			transform: scale(1)
 //--------------------------------------------------------end-base-class-------------------------------------
 
 .header
@@ -476,10 +506,6 @@
 
 .trend
 	padding: 100px 0
-	
-	&__box
-		overflow: hidden
-		box-shadow: 0 5px 30px rgba(35, 42, 50, .25)
 
 	p
 		margin-bottom: 30px
@@ -487,12 +513,20 @@
 	&__arrow
 		position: relative
 		height: 40px
+	
+	&__box
+		overflow: hidden
+
+	&__container
+		overflow: inherit
+		padding: 10px 10px 30px 10px
 
 	.swiper-slide
 		position: relative
 		background-color: #fff
-		padding: 10px 30px 105px 30px
+		padding: 10px 30px 70px 30px
 		color: $text
+		box-shadow: 0 5px 30px rgba(35, 42, 50, .25)
 		img
 			animation: scale-back .2s ease-in forwards
 
@@ -534,13 +568,6 @@
 				width: 100%
 				height: 50%
 				background-color: #e7c0b6
-	
-	&__block
-
-	&__container
-		overflow: inherit
-		background-color: rgba(35, 42, 50, .25)
-
 
 	.swiper-button-prev
 		position: absolute
@@ -596,6 +623,7 @@
 
 	p
 		margin-bottom: 55px
+		font-size: 16px
 
 
 .footer
@@ -687,7 +715,6 @@
 .catalog
 	&__nav
 		background-color: $text
-		padding: 20px 0
 
 		ul
 			display: flex
@@ -695,21 +722,30 @@
 			justify-content: space-around
 
 		li
-			position: relative
-			padding-left: 15px
 			line-height: 1.2
+			width: 25%
+			text-align: center
+
+		a
+			position: relative
+			display: block
+			color: #fff
+			text-transform: uppercase
+			padding: 20px 0 20px 15px
+			width: 100%
+			transition: all .3s
 			&::before
 				content: ""
 				position: absolute
-				left: 0
+				left: 35px
 				top: 50%
 				transform: translate(0, -50%)
 				width: 5px
 				height: 5px
 				background-color: $accent
-		a
-			color: #fff
-			text-transform: uppercase
+			&:hover
+				text-decoration: none
+				background-color: #2d3640
 
 	&__list
 		background-color: #fff
@@ -757,9 +793,7 @@
 					transform: scale(1)
 	
 	&-content
-		padding-top: 60px
-		padding-bottom: 180px
-
+		padding-bottom: 185px
 		&::before
 			position: absolute
 			left: 5%
@@ -770,7 +804,8 @@
 			flex-direction: row
 			justify-content: space-between
 			flex-wrap: wrap
-
+			padding-top: 60px
+			padding-bottom: 70px
 
 		&__block
 			position: relative
@@ -799,7 +834,6 @@
 			&:hover
 				box-shadow: 0 20px 50px rgba(0,0,0, .25)
 
-
 				.btn-pluse
 					animation: btn-pluse .2s ease-in forwards
 					padding: 17px 40px
@@ -810,8 +844,12 @@
 				margin-top: 55px
 
 			a
+				display: flex
+				flex-direction: column
+				justify-content: space-between
 				color: $text
 				text-decoration: none
+				height: 100%
 
 			.btn
 				bottom: -20px
@@ -843,14 +881,142 @@
 				justify-content: center
 				height: 200px
 				margin-bottom: 25px
+	
+	&__pagination
+		display: flex
+		flex-direction: row
+		justify-content: center
+
+		ul
+			display: flex
+			flex-direction: row
+			justify-content: center
+			margin: 0 15px
+
+		a
+			color: $text
+			margin-right: 15px
+			font-size: 16px
+			font-weight: 600
+			&:hover
+				color: $accent
+				text-decoration: none
+				img
+					transform: scale(1.2)
+					transition: all .3s
+
+				.right
+					transform: rotate(180deg) scale(1.2)
 
 
+		.right
+			transform: rotate(180deg)
 
 
+//----------------------контакти-----------------------------
+.contacts
+	position: relative
+	&::before
+		left: 50px
+		bottom: 150px
+		transform: rotate(-90deg)
+
+	&__content
+		padding: 115px 0
+
+		h6
+			margin-bottom: 20px
+		
+		ul
+			margin-bottom: 55px
+
+		li
+			margin-bottom: 20px
+
+			&:last-child
+				margin-bottom: 0
+
+		a
+			color: $text
+			&:hover
+				text-decoration: none
+		
+		img
+			margin-right: 20px
+
+	&__map
+		position: relative
+
+	#map
+		position: absolute
+		left: 48%
+		right: 0
+		top: 0
+		height: 100%
 
 
+//----------------------о нас-----------------------------
+.about
 
+	.main
+		&::before
+			right: 65%
+			top: 45%
+			transform: rotate(-90deg)
 
+	&__section
+		padding: 80px 0 110px 0
+
+		.sub-title
+			margin-top: 30px
+
+		p
+			margin-bottom: 20px
+			&:last-child
+				margin-bottom: 0
+	
+	&__img
+		position: relative
+		right: -70px
+		z-index: 1
+		box-shadow: 0 20px 50px rgba(35, 42, 50, .25)
+		max-width: 400px
+		margin-bottom: 40px
+
+		&::before
+			content: ""
+			position: absolute
+			height: 100px
+			right: -30px
+			bottom: -30px
+			z-index: -1
+			width: 60px
+			background-image: linear-gradient(to bottom, #e0b894, #d18973)
+			box-shadow: 0 10px 20px rgba($accent, .4)
+
+		img
+			width: 100%
+
+	&__block
+		padding-bottom: 20px
+		border-left: 1px solid $accent
+		margin-left: 90px
+
+		p
+			padding-left: 10px
+
+	&__insta
+		padding-bottom: 120px
+		&::before
+			left: 0
+			top: 50%
+			transform: rotate(-90deg)
+
+		p
+			margin-bottom: 45px
+
+		&_link
+			
 
 
 

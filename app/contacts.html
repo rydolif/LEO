@@ -13,7 +13,7 @@
 	<link rel="stylesheet" href="css/main.min.css">
 </head>
 
-<body>
+<body class="page contacts">
 
 	<div class="preloader">
 		<div class="pulse"></div>
@@ -59,26 +59,62 @@
 
 	<main class="main">
 
-		<section class="section-header" style="background-image: url(img/header.jpg)">
+		<section class="section-header" style="background-image: url(img/header-page.jpg)">
 			<div class="container">
 
 				<div class="section-header__content">
 					
-					<h1>Luxury Мебель <br><span>в стиле Loft</span></h1>
-					<p>Невероятная коллекция мебели в стиле лофт, <br>на любой вкус и интерьер</p>
-
-					<a href="#" class="btn">смотреть коллекцию</a>
+					<h1>Контакты нашей компании</h1>
+					<p>Оцените лично высокое качество мебели Leo Loft</p>
 
 				</div>
 			</div>
 		</section>
 
+		<section class="contacts data-bg" data-bg="Map">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-5">
+						<div class="contacts__content">
+							<p class="sub-title">как с нами связаться</p>
+							<h2>Будем рады с вами познакомиться</h2>
+							
+							<div class="contacts__content_box">
+								<div>
+									<h6>Интернет-магазин</h6>
+									<ul>
+										<li><span><img src="img/icon/clock.svg" alt="tel" width="14" height="14">Время работы ежедневно с 10:00 до 20:00.</span></li>
+										<li><a href="#" class="link"><img src="img/icon/phone.svg" alt="tel" width="14" height="14">+7 (495) 745 65 21 (Viber, WhatsApp) </a></li>
+										<li><a href="#" class="link"><img src="img/icon/phone.svg" alt="tel" width="14" height="14">+7 (495) 574 32 33 (Viber, WhatsApp) </a></li>
+										<li><a href="#" class="link"><img src="img/icon/mail.svg" alt="tel" width="14" height="14">info@designloft.com.ua</a></li>
+									</ul>
+								</div>
+								
+								<div>
+									<h6>Менеджер по работе <br>с поставщиками</h6>
+									<ul>
+										<li><span><img src="img/icon/man.svg" alt="tel" width="14" height="14">Анжелика Маслова</span></li>
+										<li><a href="#" class="link"><img src="img/icon/phone.svg" alt="tel" width="14" height="14">+7 (495) 571 81 57 (Viber, WhatsApp)</a></li>
+										<li><a href="#" class="link"><img src="img/icon/mail.svg" alt="tel" width="14" height="14">designloft.purchase@gmail.com</a></li>
+									</ul>
+								</div>
+							</div>
+
+						</div>
+					</div>
+					<div class="col-lg-7">
+					</div>
+				</div>
+			</div>
+			<div class="contacts__map"></div><div id="map"></div>
+		</section>
+
 		<section class="join">
 			<div class="container">
 				<div class="join__container">
-					<h2>Присоединяйтесь к нам</h2>
-					<p>На сегодняшний момент мы разрабатываем дизайн-проекты, подбираем предметы мебели <br>и интерьера, строим, создаем стартапы и многое</p>
-					<a href="#" class="btn">подобрать мебель</a>
+					<h2>Остались вопросы?</h2>
+					<p>Закажите звонок, и наш специалист ответит на все ваши вопросы. <br>Или приезжайте к нам в шоу-рум и задайте их лично. </p>
+					<a href="#" class="btn">Задать вопрос</a>
 				</div>
 			</div>
 		</section>
@@ -117,7 +153,7 @@
 						<span>+7 495 777-77-00</span>
 					</a>
 					<a href="tel:+7495777-77-00" class="tel">
-						<img src="img/icon/phone.svg" alt="tel" width="14" height="14">
+						<img src="img/icon/mail.svg" alt="tel" width="14" height="14">
 						<span>leo-loft@mail.com</span>
 					</a>
 				</div>
@@ -128,5 +164,259 @@
 
 	<script src="js/scripts.min.js"></script>
 
+    <script>
+      function initMap() {
+        var uluru = {lat: 34.9307386, lng: 33.6249393};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 16,
+          center: uluru,
+          styles: [
+    {
+        "featureType": "all",
+        "elementType": "labels.text.fill",
+        "stylers": [
+            {
+                "saturation": 36
+            },
+            {
+                "color": "#000000"
+            },
+            {
+                "lightness": 40
+            }
+        ]
+    },
+    {
+        "featureType": "all",
+        "elementType": "labels.text.stroke",
+        "stylers": [
+            {
+                "visibility": "on"
+            },
+            {
+                "color": "#000000"
+            },
+            {
+                "lightness": 16
+            }
+        ]
+    },
+    {
+        "featureType": "all",
+        "elementType": "labels.icon",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "administrative",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "color": "#000000"
+            },
+            {
+                "lightness": 20
+            }
+        ]
+    },
+    {
+        "featureType": "administrative",
+        "elementType": "geometry.stroke",
+        "stylers": [
+            {
+                "color": "#000000"
+            },
+            {
+                "lightness": 17
+            },
+            {
+                "weight": 1.2
+            }
+        ]
+    },
+    {
+        "featureType": "landscape",
+        "elementType": "all",
+        "stylers": [
+            {
+                "visibility": "on"
+            }
+        ]
+    },
+    {
+        "featureType": "landscape",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#000000"
+            },
+            {
+                "lightness": 20
+            }
+        ]
+    },
+    {
+        "featureType": "landscape",
+        "elementType": "labels.icon",
+        "stylers": [
+            {
+                "saturation": "-100"
+            },
+            {
+                "lightness": "-54"
+            }
+        ]
+    },
+    {
+        "featureType": "poi",
+        "elementType": "all",
+        "stylers": [
+            {
+                "visibility": "on"
+            },
+            {
+                "lightness": "0"
+            }
+        ]
+    },
+    {
+        "featureType": "poi",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#000000"
+            },
+            {
+                "lightness": 21
+            }
+        ]
+    },
+    {
+        "featureType": "poi",
+        "elementType": "labels.icon",
+        "stylers": [
+            {
+                "saturation": "-89"
+            },
+            {
+                "lightness": "-55"
+            }
+        ]
+    },
+    {
+        "featureType": "road",
+        "elementType": "labels.icon",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "road.highway",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "color": "#000000"
+            },
+            {
+                "lightness": 17
+            }
+        ]
+    },
+    {
+        "featureType": "road.highway",
+        "elementType": "geometry.stroke",
+        "stylers": [
+            {
+                "color": "#000000"
+            },
+            {
+                "lightness": 29
+            },
+            {
+                "weight": 0.2
+            }
+        ]
+    },
+    {
+        "featureType": "road.arterial",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#000000"
+            },
+            {
+                "lightness": 18
+            }
+        ]
+    },
+    {
+        "featureType": "road.local",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#000000"
+            },
+            {
+                "lightness": 16
+            }
+        ]
+    },
+    {
+        "featureType": "transit",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#000000"
+            },
+            {
+                "lightness": 19
+            }
+        ]
+    },
+    {
+        "featureType": "transit.station",
+        "elementType": "labels.icon",
+        "stylers": [
+            {
+                "visibility": "on"
+            },
+            {
+                "saturation": "-100"
+            },
+            {
+                "lightness": "-51"
+            }
+        ]
+    },
+    {
+        "featureType": "water",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#000000"
+            },
+            {
+                "lightness": 17
+            }
+        ]
+    }
+]
+        });
+
+
+          var marker = new google.maps.Marker({
+            position: {lat: 34.9307386, lng: 33.6249393},
+            map: map,
+            icon: 'img/icon/marker.png'
+          });
+
+          }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBmnk4RCDwjSucIJ2WXRnLkuCrsWR4DUM4&callback=initMap"></script>
 </body>
 </html>

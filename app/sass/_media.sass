@@ -16,6 +16,10 @@
 				padding: 20px
 
 @media only screen and (max-width : 1200px)
+	.data-bg
+		&::before
+			font-size: 160px
+
 	.header
 		&__logo
 			img
@@ -76,6 +80,24 @@
 
 		&__info
 			padding-top: 0
+	
+	.contacts
+		h2
+			font-size: 40px
+
+	.about
+		&__section
+			padding: 40px -0px
+
+			.sub-title
+				margin-top: 0
+		
+		&__img
+			right: 0
+
+		&__block
+			margin-left: 30px
+
 
 @media only screen and (max-width : 992px)
 	h1
@@ -83,6 +105,10 @@
 
 	h2
 		font-size: 40px
+
+	.data-bg
+		&::before
+			font-size: 130px
 
 	.header
 		&__container
@@ -182,9 +208,6 @@
 	.index-catalog
 		padding: 50px 0
 
-		&::before
-			font-size: 130px
-
 		.sub-title
 			margin-bottom: 20px
 
@@ -221,9 +244,11 @@
 
 		&-content
 			padding-top: 30px
+			padding-bottom: 70px
 
 			&__container
 				justify-content: center
+				padding-bottom: 30px
 
 			&__block
 				width: 33%
@@ -234,8 +259,69 @@
 				&:nth-child(n+4)
 					margin-top: 55px
 					margin-top: 20px
+	
+	.contacts
+		&__content
+			padding: 50px 0
+
+			h6
+				br
+					display: none
+
+			img
+				margin-right: 5px
+
+			&_box
+				display: flex
+				flex-direction: row
+
+				div
+					width: 47%
+					margin: 0 auto
+
+			ul
+				margin-bottom: 20px
+
+				&:last-child
+					margin-bottom: 0
+
+		.sub-title
+			margin-bottom: 20px
+
+		#map
+			position: relative
+			left: 0
+			height: 400px
+			width: 100%
+
+	.about
+
+		h2
+			br
+				display: none
+
+		&__section
+
+			p
+				&:last-child
+					margin-bottom: 20px
+		
+		&__img
+			margin: 0 auto 40px auto
+
+		&__block
+			margin-left: 0
+			p
+				&:last-child
+					margin-bottom: 0
+				br
+					display: none
 
 @media only screen and (max-width : 767px)
+	.data-bg
+		&::before
+			font-size: 90px
+
 	h1
 		font-size: 40px
 		margin-bottom: 0
@@ -283,7 +369,6 @@
 		padding: 60px 0
 
 		&::before
-			font-size: 100px
 			bottom: 0
 
 		.sub-title
@@ -348,11 +433,11 @@
 		&__nav
 			ul
 				flex-wrap: wrap
+				justify-content: flex-start
 
 			li
 				margin-bottom: 10px
-				&:nth-child(n+2)
-					margin-bottom: 0px
+				margin-right: 15px
 
 		&__list
 			ul
@@ -361,15 +446,32 @@
 
 			li
 				margin-bottom: 10px
-				&:nth-child(n+2)
-					margin-bottom: 0px
-
 
 		&-content
+			&::before
+				bottom: -20px
+
 			&__block
 				width: 50%
-				padding: 0 15px 20px 15px
+				padding: 0 15px 30px 15px
+				&:nth-child(n+3)
+					margin-top: 15px
 
+	.contacts
+		&__content
+			text-align: center
+
+			h2
+				text-align: center
+
+			&_box
+				flex-wrap: wrap
+				text-align: left
+				div
+					width: 100%
+					margin-bottom: 20px
+					&:last-child
+						margin-bottom: 0
 
 @media only screen and (max-width : 576px)
 	.superiority
@@ -415,6 +517,11 @@
 	h2
 		font-size: 25px
 
+
+	.data-bg
+		&::before
+			display: none
+
 	.btn
 		padding: 15px 45px
 
@@ -447,16 +554,8 @@
 			font-size: 30px
 	
 	.catalog
-		&__nav
-			ul
-				flex-direction: column
-				align-items: center
-			li
-				&:nth-child(n+2)
-					margin-bottom: 10px
-				&:last-child
-					margin-bottom: 0
 		&-content
+			padding-bottom: 30px
 			&__block
 				&_img
 					overflow: hidden
