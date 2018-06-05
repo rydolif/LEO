@@ -417,7 +417,7 @@
 			height: 200px
 			margin-bottom: 25px
 
-.card
+.index-card
 	display: flex
 	flex-direction: row
 
@@ -430,15 +430,15 @@
 				color: $accent
 
 			&:nth-child(1)
-				.card__wrap_block
+				.index-card__wrap_block
 					border-image: url(../img/card/1-inverted.jpg) 10 stretch
 
 			&:nth-child(2)
-				.card__wrap_block
+				.index-card__wrap_block
 					border-image: url(../img/card/2-inverted.jpg) 10 stretch
 
 			&:nth-child(3)
-				.card__wrap_block
+				.index-card__wrap_block
 					border-image: url(../img/card/3-inverted.jpg) 10 stretch
 
 		&_block
@@ -519,7 +519,7 @@
 
 	&__container
 		overflow: inherit
-		padding: 10px 10px 30px 10px
+		padding: 10px 10px 35px 10px
 
 	.swiper-slide
 		position: relative
@@ -711,7 +711,7 @@
 			margin-bottom: 0
 
 
-//---------------------------каталог--------------------------
+//---------------------------каталог-------------------------
 .catalog
 	&__nav
 		background-color: $text
@@ -840,6 +840,7 @@
 					b
 						opacity: 1
 						transition: all .5s
+
 			&:nth-child(n+5)
 				margin-top: 55px
 
@@ -876,6 +877,7 @@
 					width: 100%
 					height: 50%
 					background-color: #e7c0b6
+
 			&_img
 				display: flex
 				justify-content: center
@@ -955,10 +957,9 @@
 		height: 100%
 
 
-//----------------------о нас-----------------------------
+//-------------------------о нас-----------------------------
 .about
-
-	.main
+	.wrap
 		&::before
 			right: 65%
 			top: 45%
@@ -1016,8 +1017,287 @@
 			margin-bottom: 45px
 
 		&_link
-			
+			img
+				margin-right: 25px
+
+			a
+				color: $text
+				font-weight: 700
+				text-decoration: underline
+				&:hover
+					color: $text
+					text-decoration: none
+		
+		&_container
+			display: flex
+			flex-direction: column
+			justify-content: flex-start
+			align-items: flex-start
+			flex-wrap: wrap
+			height: 500px
+			width: 570px
+
+		&_block
+			padding: 92px 30px 70px 35px
+			background-image: linear-gradient(to bottom, #e0b894, #d18973)
+			color: #fff
+			font-weight: 700
+			font-size: 18px
+			margin-bottom: 3px
+			margin-right: 3px
+			width: 280px
+
+			a
+				color: #fff
+				&:hover
+					color: #fff
+
+		&_block-img
+			margin-bottom: 3px
+
+			&:nth-child(1)
+				height: 155px
+
+			&:nth-child(2)
+				height: 155px
+				width: 280px
+
+				img
+						width: 100%
+
+			&:last-child
+				height: 330px
+				img
+					width: 100%
+					height: 100%
+
+//-------------------------card------------------------------
+
+.card
+	.header
+		background-color: $text
+		z-index: 1000
+
+	.main
+		padding-top: 95px
+	
+	h6
+		position: relative
+		&::after
+			content: ""
+			display: block
+			width: 70%
+			height: 1px
+			background-color: $accent
+			margin-top: 25px
+			margin-bottom: 40px
+	
+	&__section
+		padding: 100px 0
+		p
+			margin-bottom: 40px
+
+		&_box
+			display: flex
+			flex-direction: row
+			align-items: center
+			margin-bottom: 70px
+			a
+				margin-left: 20px
+				color: #bfbfbf
+				font-size: 12px
+				font-weight: 700
+				text-decoration: underline
+				&:hover
+					color: #bfbfbf
+					text-decoration: none
+				&:focus
+					color: #bfbfbf
+					text-decoration: none
+
+		&_block
+			padding: 10px 30px
+			border: 1px solid #bfbfbf
+			&:first-child
+				border: 1px solid $accent
+				color: $accent
+
+		&_price
+			position: relative
+			display: flex
+			flex-direction: row
+			justify-content: space-between
+			align-items: center
+			b
+				span
+					position: relative
+					font-size: 30px
+					font-weight: 700
+					z-index: 1
+					padding: 0 5px
+					&::after
+						content: ""
+						position: absolute
+						bottom: 0
+						left: 0
+						z-index: -1
+						width: 100%
+						height: 50%
+						background-color: #e7c0b6
+					span
+						font-size: 14px
+						text-transform: uppercase
+
+			.btn
+				padding: 15px 20px 15px 35px
+				width: 170px
+				font-size: 12px
+				text-align: left
+				&::before
+					content: ""
+					position: absolute
+					right: 8px
+					top: 50%
+					transform: translate(0, -50%)
+					width: 30px
+					height: 30px
+					background-color: #fff
+					border-radius: 50%
+
+				&::after
+					content: "+"
+					position: absolute
+					top: 50%
+					right: 17px
+					transform: translate(0, -50%)
+					color: #000
+					font-size: 16px
+					font-weight: 600
+
+		&_calculator
+			display: flex
+			flex-direction: row
+			justify-content: space-between
+			border: 1px solid #d3d3d3
+			border-radius: 40px
+			padding: 13px 20px
+			font-size: 14px
+			font-weight: 700
+			line-height: 1
+			span
+				&:nth-child(2)
+					margin: 0 20px
 
 
+	&__insta
+		.container
+			position: relative
+
+		&_bg
+			position: absolute
+			left: -360px
+
+		&_wrap
+			padding-left: 70px
+
+		&_container
+			display: flex
+			flex-direction: row
+
+		&_block-img
+			margin-bottom: 3px
+			margin-right: 3px
+
+	&__info
+		padding: 90px 0
+		background-color: #f5f2ed
+
+		.one
+			display: block
+
+		.off
+			display: none
+
+		&_container
+			display: flex
+			flex-direction: row
+			justify-content: space-between
+			align-items: center
+			flex-wrap: wrap
+
+		&_block
+			width: 25%
+			display: flex
+			flex-direction: column
+			padding: 35px 25px
+			border-left: 1px solid #e6e6e6
+			animation: bg-back .3s linear 1 forwards
+			&:last-child
+				border-right: 1px solid #e6e6e6
+			&:hover
+				transition: all .2s
+				background-image: linear-gradient(to bottom, #e0b894, #d18973)
+				box-shadow: 0 20px 50px rgba(35, 42, 50, .25)
+				color: #fff
+				animation: bg .3s linear 1 forwards
+				h6
+					&::after
+						background-color: #fff
+				.off
+					display: block
+				.one
+					display: none
+				.card__info_link
+					animation: opacity .3s linear 1 forwards
+
+			img
+				margin-bottom: 30px
+				transition: all .2s
+
+			&-active
+				animation: bg .3s linear 1 forwards
+				transition: all .2s
+				background-image: linear-gradient(to bottom, #e0b894, #d18973)
+				box-shadow: 0 20px 50px rgba(35, 42, 50, .25)
+				color: #fff
+				.off
+					display: block
+				.one
+					display: none
+				h6
+					&::after
+						background-color: #fff
+				.card__info_link
+					animation: opacity .3s linear 1 forwards
+
+		&_link
+			color: #fff
+			font-weight: 700
+			font-size: 14px
+			animation: opacity-back .3s linear 1 forwards
+			position: relative
+			&::before
+				content: ''
+				width: 0
+				transform: scale(1)
+				transition: all .3s
+				position: absolute
+				bottom: 0
+				width: 100%
+				height: 1px
+				background-color: #fff
+				z-index: -1
+
+			&:hover
+				color: #fff
+				text-decoration: none
+				&::before
+					transform: scale(0)
+
+			&:focus
+				color: #fff
+				text-decoration: none
+				&::before
+					transform: scale(0)
 
 @import "media" // Always at the end

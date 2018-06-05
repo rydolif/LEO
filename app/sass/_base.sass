@@ -32,7 +32,7 @@ body
 section
 	overflow: hidden
 	
-h1, h2, h3, h4, h5 ,h6
+h1, h2, h3, h4, h5, h6
 	font-family: $title
 	font-weight: 700
 	line-height: 1.4
@@ -449,6 +449,32 @@ body input:required:valid, body textarea:required:valid
 		
 		100%
 			transform: scale(1)
+
+//----------------------card - bg -------------------
+@keyframes bg
+		0%
+			padding: 35px 25px
+		100%
+			padding: 90px 25px
+
+@keyframes bg-back
+		0%
+			padding: 90px 25px
+		100%
+			padding: 35px 25px
+
+//----------------------opacity -------------------
+@keyframes opacity
+		0%
+			opacity: 0
+		100%
+			opacity: 1
+
+@keyframes opacity-back
+		0%
+			opacity: 1
+		100%
+			opacity: 0
 
 //----------------------------------slider---------------------
 .swiper-button-prev
