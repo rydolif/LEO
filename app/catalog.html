@@ -410,20 +410,36 @@
 
 
 
+
+
 	<div class="modal" id="order">
 
 			<form action="sendmail.php" class="order-form" method="post">
 
-				<input type="hidden" name="subject" value="Скачайте бесплатно презентацию">
-			
+				<input type="hidden" name="subject" value="Оформление заказа">
+				<input type="hidden" name="product" value="Стуло">
+				
+				<button class="close order_close" type="button">
+					<img src="img/icon/close.svg" alt="close" width="25" height="25">
+				</button>
+
 				<h2>Оформление заказа</h2>
 				<p class="sub-title">Вы заказываете</p>
 
-				<button class="hamburger hamburger--elastic is-active order_close" type="button">
-					<span class="hamburger-box">
-						<span class="hamburger-inner"></span>
-					</span>
-				</button>
+				<div class="modal__container">
+					<p>Arm Chair Queens Cosy Blue</p>
+					<div class="calculat">
+
+					<div class="quantity-block">
+						<button type="button" class="pluse button">+</button>
+							<input class="number num" type="number" name="number" value="1" data-price="15495" readonly>
+						<button type="button" class="minus button">-</button>
+					</div>
+
+					</div>
+					<b><span class="price">15 495</span><span> руб.</span></b>
+				</div>
+				
 
 				<h3>Ваши контактые данные</h3>
 
@@ -435,6 +451,16 @@
 
 
 			</form>
+	</div>
+	
+	<div class="modal" id="thanks">
+		<button class="close thanks_close" type="button">
+					<img src="img/icon/close.svg" alt="close" width="25" height="25">
+		</button>
+
+		<h2>Спасибо <br>за доверие!</h2>
+		<p>Мы обязательно с вами свяжемся!</p>
+		<img src="img/modal.jpg" alt="modal">
 	</div>
 
 	

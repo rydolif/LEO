@@ -92,36 +92,21 @@ i
 	font-size: 16px
 
 input, textarea
-	border: #666 1px solid
+	border: #808080 1px solid
 	border-radius: 0
 	outline: none
-	&:focus:required:invalid
-		border-color: red
-	&:required:valid
-		border-color: green
-
-b, strong
-	font-weight: 700
-
-p
-	margin: 0
-	padding: 0
-a,
-a:focus,
-a:hover
-	outline: none
-
-input
 	box-shadow: none
 	-webkit-appearance: none
-	padding: 15px 35px
-	border-color: red
-	border-radius: 40px
-	border: 1px solid #808080
-	outline: none
-	font-weight: 400
-	line-height: 1
-	text-align: center
+	&:focus:required:invalid
+		border-color: #808080
+		outline: none
+		box-shadow: none
+		-webkit-appearance: non
+	&:required:valid
+		border-color: #808080
+		outline: none
+		box-shadow: none
+		-webkit-appearance: non
 
 	&::placeholder
 		color: #808080
@@ -129,118 +114,25 @@ input
 		text-transform: uppercase
 		line-height: 1
 
-	&:hover
-		outline: none
-		box-shadow: none
-		-webkit-appearance: none
-
-	&:focus
-		outline: none
-		box-shadow: none
-		-webkit-appearance: none
-
-textarea
-	resize: none
-	outline: none
-	box-shadow: none
-	-webkit-appearance: none
-	border: none
-	&:hover
-		box-shadow: none
-		outline: none
-		-webkit-appearance: none
-	&:focus
-		outline: none
-		box-shadow: none
-		-webkit-appearance: none
-
-
-//--------------------------------preloader----------------------------------------------
-.preloader
-	position: fixed
-	top: 0
-	left: 0
-	right: 0
-	bottom: 0
-	z-index: 9999
-	background-color: #fff
-
-.pulse
-	position: relative
-	left: 50%
-	top: 50vh
-	margin: -40px 0 0 -40px
-
-.pulse::before, .pulse::after
-	content: ''
-	border: 5px solid $accent
-	height: 80px
-	width: 80px
-	border-radius: 50%
-	position: absolute
-
-.pulse::before
-	animation: pulse-outer .8s ease-in infinite
-
-.pulse::after
-	animation: pulse-inner .8s ease-in infinite
-
-
-@keyframes pulse-outer
-		0%
-			opacity: .1
-		
-		50%
-			opacity: .5
-		
-		100%
-			opacity: 0
-
-
-@keyframes pulse-inner
-		0%
-			opacity: 1
-			transform: scale(0)
-		
-		100%
-			opacity: 0
-			transform: scale(1)
-
-//------------------------------------btn----------------------------------------
-.btn
-	position: relative
-	display: inline-block
-	border: none
-	outline: none
-	padding: 20px 45px
+input
+	padding: 15px 25px
 	border-radius: 40px
-	text-align: center
+	font-weight: 400
 	line-height: 1
-	color: #fff
+	text-align: center
+
+b, strong
 	font-weight: 700
-	letter-spacing: 1px
-	box-shadow: 0 10px 20px rgba($accent, .4)
-	background-image: linear-gradient(to bottom, #e0b894, #d18973)
-	text-transform: uppercase
-	font-size: 14px
 
-	&:hover
-		outline: none
-		border: none
-		color: #fff
-		text-decoration: none
-		cursor: pointer
-		background-image: linear-gradient(to bottom, #e0b894, #e0b894)
-		transition: all .3s
+p
+	margin: 0
+	padding: 0
 
-	&:focus
-		outline: none
-		border: none
-		color: #fff
-		text-decoration: none
-		cursor: pointer
-		background-image: linear-gradient(to bottom, #d18973, #d18973)
-		transition: all .3s
+a,
+a:focus,
+a:hover
+	outline: none
+
 
 //--------------------------------------form-------------------------------------------
 
@@ -256,164 +148,12 @@ textarea
 		text-align: center
 		font-weight: 600
 
-//-----------------------------------------modal-----------------------------------
-.modal
-	position: relative
-	overflow: hidden
-	width: 830px
-	height: auto
-	padding: 50px
-	background-color: #fff
-	z-index: 1
-
-	&__container
-		margin-bottom: 50px
-		display: flex
-		flex-direction: row
-		justify-content: space-between
-		p
-			font-size: 24px
-			font-family: $title
-		b
-			span
-				position: relative
-				font-size: 30px
-				font-weight: 700
-				z-index: 1
-				padding: 0 5px
-				&::after
-					content: ""
-					position: absolute
-					bottom: 0
-					left: 0
-					z-index: -1
-					width: 100%
-					height: 50%
-					background-color: #e7c0b6
-				span
-					font-size: 14px
-					text-transform: uppercase
-	h2
-		margin-bottom: 50px
-		font-size: 36px
-		text-align: center
-		&::after
-			margin: 20px auto 40px auto
-
-	.sub-title
-		margin-bottom: 30px
-
-	h3
-		font-size: 30px
-		text-align: center
-		margin-bottom: 30px
-
-		span
-			font-size: 26px
-			color: #212121
-			font-weight: 300
-
-	.form-group
-		display: flex
-		flex-direction: row
-		justify-content: space-between
-		align-items: center
-		div
-			position: relative
-			width: 25%
-
-	.btn
-		width: 100%
-		padding: 18px 0
-		font-size: 12px
-
-	label.error
-		position: absolute
-		top: -20px
-		right: 0
-		left: 0
-		transition: all .3s
-		animation: error .3s linear 1 forwards
-		color: red
-		text-align: center
-		font-weight: 400
-
-	.hamburger
-		position: absolute
-		right: 10px
-		top: 30px
-		display: block
-
-		.hamburger-box
-			width: 30px
-			right: 0
-
-		.hamburger-inner,
-		.hamburger-inner:after,
-		.hamburger-inner:before
-			background-color: $accent
-			width: 30px
-			height: 4px
-			right: 0
-
-#question
-	width: 400px
-	text-align: center
-	padding: 50px
-	
-	h2
-		margin-bottom: 0
-		&::after
-			margin-top: 15px
-			margin-bottom: 15px
-	p
-		margin-bottom: 30px
-		text-align: center
-
-	.form-group
-		width: 100%
-		margin-bottom: 20px
-		div
-			width: 100%
-
-	input
-		width: 100%
-
-#thanks
-	width: 400px
-	height: 420px
-	text-align: center
-	padding: 50px
-
-	.sub-title
-		margin-bottom: 15px
-
-	h2
-		font-size: 32px
-		text-align: center
-		margin-bottom: 20px
-		&:after
-			display: none
-
-		span
-			font-size: 16px
-
-	p
-		text-align: center
-
-	b
-		font-weight: 600
-
-	img
-		position: absolute
-		bottom: 0
-		left: 0
 
 .calculat
 	position: relative
 	
 	input
-		padding: 15px 25px 15px 35px
+		padding: 15px 35px 15px 35px
 		width: 110px
 
 	.button
@@ -428,11 +168,10 @@ textarea
 		background-color: #fff
 
 	.minus
-		right: 10px
-
-	.pluse
 		left: 30px
 
+	.pluse
+		right: 10px
 
 
 //-----------------------------------hamburgerа---------------------------

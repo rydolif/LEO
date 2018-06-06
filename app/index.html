@@ -370,7 +370,7 @@
 			
 				<h2>Превосходство индивидуальности</h2>
 
-				<button class="hamburger hamburger--elastic is-active video_close" type="button">
+				<button class="close video_close" type="button">
 					<img src="img/icon/close.svg" alt="close" width="25" height="25">
 				</button>
 
@@ -385,8 +385,9 @@
 			<form action="sendmail.php" class="order-form" method="post">
 
 				<input type="hidden" name="subject" value="Оформление заказа">
+				<input type="hidden" name="product" value="Стуло">
 				
-				<button class="hamburger hamburger--elastic is-active order_close" type="button">
+				<button class="close order_close" type="button">
 					<img src="img/icon/close.svg" alt="close" width="25" height="25">
 				</button>
 
@@ -398,9 +399,9 @@
 					<div class="calculat">
 
 					<div class="quantity-block">
-						<button class="quantity-arrow-plusminus pluse button">-</button>
-							<input class="number quantity-num" type="number" value="1" data-price="15495" readonly>
-						<button class="quantity-arrow-plus minus button">+</button>
+						<button type="button" class="pluse button">+</button>
+							<input class="number num" type="number" name="number" value="1" data-price="15495" readonly>
+						<button type="button" class="minus button">-</button>
 					</div>
 
 					</div>
@@ -421,7 +422,7 @@
 	</div>
 	
 	<div class="modal" id="thanks">
-		<button class="hamburger hamburger--elastic is-active thanks_close" type="button">
+		<button class="close thanks_close" type="button">
 					<img src="img/icon/close.svg" alt="close" width="25" height="25">
 		</button>
 
