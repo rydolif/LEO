@@ -1,14 +1,15 @@
 <?php
-	$SITE_TITLE = 'DataCube';
+	$SITE_TITLE = 'Leo Loft';
 	$SITE_DESCR = '';
 
 	if ( isset($_POST) ) {
 		$name = htmlspecialchars(trim($_POST['name']));
 		$phone = htmlspecialchars(trim($_POST['phone']));
+		$number = htmlspecialchars(trim($_POST['number']));
 		$subject = $_POST['subject'] ? htmlspecialchars(trim($_POST['subject'])) : '';
 		$comment = isset($_POST['comment']) ? htmlspecialchars(trim($_POST['comment'])) : '';
 		$question = isset($_POST['question']) ? htmlspecialchars(trim($_POST['question'])) : '';
-		$to = 'Elena357910@yandex.com';
+		$to = 'rudolifrudolif@gmail.com';
 
 		$headers = "From: $SITE_TITLE \r\n";
 		$headers .= "Reply-To: ". $email . "\r\n";
@@ -17,6 +18,7 @@
 		$data = '<h1>'.$subject."</h1>";
 		$data .= 'Имя: '.$name."<br>";
 		$data .= 'Телефон: '.$phone."<br>";
+		$data .= 'Количество: '.$number."<br>";
 
 		if ( $comment != '' ) {
 			$data .= 'Комментарий: ' . $comment;

@@ -161,7 +161,7 @@
 	&::before
 		content: attr(data-bg)
 		position: absolute
-		z-index: -1
+		z-index: -100
 		font-weight: 700
 		color: #f5f2ed
 		font-size: 200px
@@ -722,18 +722,10 @@
 			justify-content: space-around
 
 		li
+			position: relative
 			line-height: 1.2
 			width: 25%
 			text-align: center
-
-		a
-			position: relative
-			display: block
-			color: #fff
-			text-transform: uppercase
-			padding: 20px 0 20px 15px
-			width: 100%
-			transition: all .3s
 			&::before
 				content: ""
 				position: absolute
@@ -746,6 +738,15 @@
 			&:hover
 				text-decoration: none
 				background-color: #2d3640
+
+		a
+			position: relative
+			display: block
+			color: #fff
+			text-transform: uppercase
+			padding: 20px 0 20px 15px
+			width: 100%
+			transition: all .3s
 
 	&__list
 		background-color: #fff
@@ -775,6 +776,7 @@
 				transition: all .3s
 				position: absolute
 				bottom: -13px
+				left: 0
 				width: 100%
 				height: 1px
 				background-color: $accent
@@ -1014,7 +1016,7 @@
 			transform: rotate(-90deg)
 
 		p
-			margin-bottom: 45px
+			margin-bottom: 20px
 
 		&_link
 			img
@@ -1036,21 +1038,38 @@
 			flex-wrap: wrap
 			height: 500px
 			width: 570px
+			margin-top: 20px
+
+			&::before
+				right: -100px
+				top: 30%
 
 		&_block
-			padding: 92px 30px 70px 35px
+			position: relative
+			padding: 170px 30px 40px 35px
 			background-image: linear-gradient(to bottom, #e0b894, #d18973)
 			color: #fff
 			font-weight: 700
-			font-size: 18px
+			font-size: 16px
+			line-height: 1.5
 			margin-bottom: 3px
 			margin-right: 3px
 			width: 280px
+			transform: scale(1.1)
+			
+			img
+				position: absolute
+				top: 65px
+				width: 50px
+				height: 45px
+				z-index: -1
 
 			a
 				color: #fff
+				text-decoration: underline
 				&:hover
 					color: #fff
+					text-decoration: none
 
 		&_block-img
 			margin-bottom: 3px
@@ -1071,8 +1090,8 @@
 					width: 100%
 					height: 100%
 
-//-------------------------card------------------------------
 
+//-------------------------card------------------------------
 .card
 	.header
 		background-color: $text
@@ -1081,6 +1100,12 @@
 	.main
 		padding-top: 95px
 	
+	&__wrap
+		&::before
+			transform: rotate(-90deg)
+			right: -20%
+			bottom: 40%
+
 	h6
 		position: relative
 		&::after
@@ -1093,11 +1118,26 @@
 			margin-bottom: 40px
 	
 	&__section
-		padding: 100px 0
+		padding: 90px 0 100px 0
+		&::before
+			transform: rotate(-90deg)
+
+		&::after
+			content: attr(data-bg_two)
+			position: absolute
+			right: 0
+			bottom: 100px
+			z-index: -1
+			font-weight: 700
+			color: #f5f2ed
+			font-size: 200px
+			line-height: 1
+			transform: rotate(-90deg)
+
 		p
 			margin-bottom: 40px
 
-		&_box
+		&_list
 			display: flex
 			flex-direction: row
 			align-items: center
@@ -1114,13 +1154,47 @@
 				&:focus
 					color: #bfbfbf
 					text-decoration: none
+		
+		&_box
+			&-list
+				display: flex
+				flex-direction: row
+				justify-content: space-around
+				flex-wrap: wrap
 
-		&_block
+			&-item
+				border: 1px solid #e6e6e6
+				width: 20%
+				img
+					max-width: 100%
+					max-height: 100%
+					min-height: auto
+					min-width: auto
+				a
+					margin: 0 auto
+
+		&_img
+			width: 100%
+			height: auto
+			margin-bottom: 60px
+			img
+				max-width: 100%
+				max-height: 100%
+				min-height: auto
+				min-width: auto
+
+		&_container
+			margin-left: 70px
+
+		&_item
 			padding: 10px 30px
 			border: 1px solid #bfbfbf
 			&:first-child
 				border: 1px solid $accent
 				color: $accent
+
+			img
+				margin-right: 10px
 
 		&_price
 			position: relative
@@ -1187,7 +1261,12 @@
 			span
 				&:nth-child(2)
 					margin: 0 20px
+		
+		.height
+			transform: rotate(45deg)
 
+		.width
+			transform: rotate(-45deg)
 
 	&__insta
 		.container
@@ -1209,7 +1288,6 @@
 			margin-right: 3px
 
 	&__info
-		padding: 90px 0
 		background-color: #f5f2ed
 
 		.one

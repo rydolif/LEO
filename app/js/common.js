@@ -1,9 +1,43 @@
 $(function() {
 
-$(".preloader").delay(1000).fadeOut();
+
+//-----------------------------calculator---------------------------
+$(function() {
+ 
+(function quantityProducts() {
+    var $quantityArrowMinus = $(".quantity-arrow-minus");
+    var $quantityArrowPlus = $(".quantity-arrow-plus");
+    var $quantityNum = $(".quantity-num");
+ 
+    $quantityArrowMinus.click(quantityMinus);
+    $quantityArrowPlus.click(quantityPlus);
+ 
+    function quantityMinus() {
+      if ($quantityNum.val() > 1) {
+        $quantityNum.val(+$quantityNum.val() - 1);
+          var value = $('#number').val();
+          var price = $('#number').data('price');
+
+          var month = Math.round(price * value);
+          $('#price').text(month);
+
+      }
+    }
+ 
+    function quantityPlus() {
+      $quantityNum.val(+$quantityNum.val() + 1);
+
+        var value = $('.number').val();
+        var price = $('.number').data('price');
+
+        var month = Math.round(price * value);
+        $('.price').text(month);
+    }
+  })();
+ 
+});
 
 //-----------------------------slider---------------------------
-
 var swiper = new Swiper('.slider__container', {
   slidesPerView: 4,
   spaceBetween: 110,
@@ -76,13 +110,14 @@ $('.hamburger--3dx').click(function() {
       var t = {
         name: jQuery(".order-form").find("input[name=name]").val(),
         phone: jQuery(".order-form").find("input[name=phone]").val(),
+        number: jQuery(".order-form").find("input[name=number]").val(),
         subject: jQuery(".order-form").find("input[name=subject]").val()
       };
       ajaxSend('.order-form', t);
     }
   });
 
-  $(".presentation-form").validate({
+  $(".question-form").validate({
     messages: {
       name: "Введите ваше Имя",
       phone: "Введите ваш телефон",
@@ -95,11 +130,11 @@ $('.hamburger--3dx').click(function() {
     },
     submitHandler: function(form) {
       var t = {
-        name: jQuery(".presentation-form").find("input[name=name]").val(),
-        phone: jQuery(".presentation-form").find("input[name=phone]").val(),
-        subject: jQuery(".presentation-form").find("input[name=subject]").val()
+        name: jQuery(".question-form").find("input[name=name]").val(),
+        phone: jQuery(".question-form").find("input[name=phone]").val(),
+        subject: jQuery(".question-form").find("input[name=subject]").val()
       };
-      ajaxSend('.presentation-form', t);
+      ajaxSend('.question-form', t);
     }
   });
 
@@ -151,3 +186,8 @@ $('.hamburger--3dx').click(function() {
 
 });
 
+//----------------------------------------preloader----------------------------------
+
+$(window).on('load', function(){
+  $('.preloader').delay(1000).fadeOut('slow');
+});

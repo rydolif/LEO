@@ -114,7 +114,7 @@
 				<div class="join__container">
 					<h2>Остались вопросы?</h2>
 					<p>Закажите звонок, и наш специалист ответит на все ваши вопросы. <br>Или приезжайте к нам в шоу-рум и задайте их лично. </p>
-					<a href="#" class="btn">Задать вопрос</a>
+					<a href="#" class="btn question_open">Задать вопрос</a>
 				</div>
 			</div>
 		</section>
@@ -161,6 +161,48 @@
 			</div>
 		</div>
 	</footer>
+
+
+    <div class="modal" id="question">
+
+        <form action="sendmail.php" class="question-form" method="post">
+
+            <input type="hidden" name="subject" value="Задайте вопрос специалисту">
+        
+            <h2>Задайте вопрос <br>специалисту</h2>
+            <p>Заполните форму и наш специалист <br>свяжется с вами в течение 5 минут</p>
+
+            <button class="hamburger hamburger--elastic is-active question_close" type="button">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+
+            <div class="form-group">
+                <div><input type="text" class="form__field" name="name" placeholder="Введите ваше имя" required></div>
+            </div>
+
+            <div class="form-group">
+                <div><input type="tel" name="phone" class="form__field" required placeholder="Ведите ваш телефон" pattern="\+7\s\([0-9]{3}\)\s[0-9]{3}-[0-9]{2}-[0-9]{2}"></div>
+            </div>
+            
+            <div class="form-group">
+                <div><button type="submit" class="btn" name="submit" value="отправить">оформить заказ</button></div>
+            </div>
+        </form>
+    </div>
+    
+    <div class="modal" id="thanks">
+        <button class="hamburger hamburger--elastic is-active thanks_close" type="button">
+            <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+            </span>
+        </button>
+
+        <h2>Спасибо <br>за доверие!</h2>
+        <p>Мы обязательно с вами свяжемся!</p>
+        <img src="img/modal.jpg" alt="modal">
+    </div>
 
 	<script src="js/scripts.min.js"></script>
 

@@ -114,28 +114,28 @@ a:hover
 input
 	box-shadow: none
 	-webkit-appearance: none
-	width: 100%
-	padding: 15px 40px
+	padding: 15px 35px
 	border-color: red
-	border-radius: 20px
-	border: none
+	border-radius: 40px
+	border: 1px solid #808080
 	outline: none
-	background-color: #f2f2f2
-	font-weight: 800
+	font-weight: 400
+	line-height: 1
+	text-align: center
 
 	&::placeholder
-		color: #212121
-		font-size: 14px
+		color: #808080
+		font-size: 12px
+		text-transform: uppercase
+		line-height: 1
 
 	&:hover
 		outline: none
-		border: none
 		box-shadow: none
 		-webkit-appearance: none
 
 	&:focus
 		outline: none
-		border: none
 		box-shadow: none
 		-webkit-appearance: none
 
@@ -154,11 +154,6 @@ textarea
 		box-shadow: none
 		-webkit-appearance: none
 
-body input:focus:required:invalid, body textarea:focus:required:invalid
-	border: none
-
-body input:required:valid, body textarea:required:valid
-	border: none
 
 //--------------------------------preloader----------------------------------------------
 .preloader
@@ -265,47 +260,72 @@ body input:required:valid, body textarea:required:valid
 .modal
 	position: relative
 	overflow: hidden
-	width: 800px
+	width: 830px
 	height: auto
 	padding: 50px
-	border-radius: 10px
 	background-color: #fff
 	z-index: 1
 
-	img
-		position: absolute
-		right: 20px
-		bottom: -60px
-		z-index: -1
-
+	&__container
+		margin-bottom: 50px
+		display: flex
+		flex-direction: row
+		justify-content: space-between
+		p
+			font-size: 24px
+			font-family: $title
+		b
+			span
+				position: relative
+				font-size: 30px
+				font-weight: 700
+				z-index: 1
+				padding: 0 5px
+				&::after
+					content: ""
+					position: absolute
+					bottom: 0
+					left: 0
+					z-index: -1
+					width: 100%
+					height: 50%
+					background-color: #e7c0b6
+				span
+					font-size: 14px
+					text-transform: uppercase
 	h2
 		margin-bottom: 50px
 		font-size: 36px
-		text-align: left
+		text-align: center
+		&::after
+			margin: 20px auto 40px auto
+
+	.sub-title
+		margin-bottom: 30px
+
+	h3
+		font-size: 30px
+		text-align: center
+		margin-bottom: 30px
 
 		span
 			font-size: 26px
 			color: #212121
 			font-weight: 300
-	
-	b
-		color: $accent
-		font-weight: 300
 
 	.form-group
 		display: flex
 		flex-direction: row
-		width: 270px
-		margin-bottom: 20px
-		position: relative
-
-		&__block
-			width: 53%
-			&:nth-child(even)
-				width: 45%
+		justify-content: space-between
+		align-items: center
+		div
+			position: relative
+			width: 25%
 
 	.btn
-		width: 270px
+		width: 100%
+		padding: 18px 0
+		font-size: 12px
 
 	label.error
 		position: absolute
@@ -316,7 +336,7 @@ body input:required:valid, body textarea:required:valid
 		animation: error .3s linear 1 forwards
 		color: red
 		text-align: center
-		font-weight: 600
+		font-weight: 400
 
 	.hamburger
 		position: absolute
@@ -336,34 +356,44 @@ body input:required:valid, body textarea:required:valid
 			height: 4px
 			right: 0
 
-.modal-base
-	width: 320px
-	padding: 30px
-
+#question
+	width: 400px
+	text-align: center
+	padding: 50px
+	
 	h2
-		font-size: 24px
+		margin-bottom: 0
+		&::after
+			margin-top: 15px
+			margin-bottom: 15px
+	p
 		margin-bottom: 30px
-		span
-			font-size: 18px
-
-	img
-		display: none
+		text-align: center
 
 	.form-group
 		width: 100%
+		margin-bottom: 20px
+		div
+			width: 100%
 
-	.btn
+	input
 		width: 100%
 
 #thanks
-	width: 720px
+	width: 400px
+	height: 420px
 	text-align: center
-	padding: 20px
+	padding: 50px
+
+	.sub-title
+		margin-bottom: 15px
 
 	h2
 		font-size: 32px
 		text-align: center
-		margin-bottom: 0
+		margin-bottom: 20px
+		&:after
+			display: none
 
 		span
 			font-size: 16px
@@ -375,13 +405,33 @@ body input:required:valid, body textarea:required:valid
 		font-weight: 600
 
 	img
-		position: relative
-		width: 100px
-		height: 100px
-		margin: 45px auto
-		top: 0
-		left: 50%
-		transform: translate(-50%, 0%)
+		position: absolute
+		bottom: 0
+		left: 0
+
+.calculat
+	position: relative
+	
+	input
+		padding: 15px 25px 15px 35px
+		width: 110px
+
+	.button
+		position: absolute
+		top: 10px
+		transform: translate(-50%, 0)
+		font-size: 18px
+		font-weight: 700
+		cursor: pointer
+		border: none
+		outline: none
+		background-color: #fff
+
+	.minus
+		right: 10px
+
+	.pluse
+		left: 30px
 
 
 
